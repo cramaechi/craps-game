@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
 		}
 	}
 
-	cout<<"The player's winning probability is: "<<winningProbability(wins, losses) * 100<<"%\n";
+	cout<<"The player's winning probability is: "<<winningProbability(wins, losses) * 100<<"% over the long run.\n";
 
 	//system("pause");
 	return 0;
