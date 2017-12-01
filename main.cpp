@@ -54,7 +54,6 @@ int main(int argc, char* argv[])
 		}
 	}
 
-    cout<<wins<<" "<<losses<<endl;
 	cout<<"The player's winning probability is: "<<winningProbability(wins, losses) * 100<<"%\n";
 
 	//system("pause");
