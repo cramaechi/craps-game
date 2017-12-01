@@ -35,6 +35,6 @@ $ ./craps
 
 Sample Output:
 ```
-The player's winning probability is: 49.01%                                                                                                                                                                                                   
+The player's winning probability is 49.01% over the long run.                                                                                                                                                                                                  
 
 ```
