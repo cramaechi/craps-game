@@ -26,66 +26,66 @@ bool isPointNumber(int roll);
 
 int main(int argc, char* argv[])
 {
-	srand(time(NULL));
+    srand(time(NULL));
 
-	int roll, point = 0, wins = 0, losses = 0;
-	
-	for(int i = 1; i <=10000; i++)
-	{
+    int roll, point = 0, wins = 0, losses = 0;
+
+    for(int i = 1; i <=10000; i++)
+    {
         int count = 0;
 
         while(true)
-		{ 
-			++count;
-			roll = getRoll();
-			
-			if (isPointNumber(roll) && count == 1)
-				point = roll;
-			else if (playerWins(roll, point, count))
+        { 
+            ++count;
+            roll = getRoll();
+
+            if (isPointNumber(roll) && count == 1)
+                point = roll;
+            else if (playerWins(roll, point, count))
             {
-				++wins;
+                ++wins;
                 break;
             }
-			else if (playerLoses(roll, count))
+            else if (playerLoses(roll, count))
             {
-				++losses;
+                ++losses;
                 break;
             }
-		}
-	}
+        }
+    }
 
-	cout<<"The player's winning probability is "<<winningProbability(wins, losses) * 100<<"% over the long run.\n";
+    cout<<"The player's winning probability is "<<winningProbability(wins, losses) * 100<<"% over the long run.\n";
 
-	//system("pause");
-	return 0;
+    //system("pause");
+    return 0;
 }
 
 int getRoll()
 {
-	int dice1 = rand() % 6 + 1;
-	int dice2 = rand() % 6 + 1;
+    int dice1 = rand() % 6 + 1;
+    int dice2 = rand() % 6 + 1;
 
-	return dice1 + dice2;
+    return dice1 + dice2;
 }
 
 double winningProbability(double w, double l)
 {
-	return (w/(w+l)); 
+    return (w/(w+l)); 
 }
 
 bool playerWins(int roll, int point, int numberOfRolls)
 {
-	return((numberOfRolls == 1 && (roll == 7 || roll == 11)) || (numberOfRolls > 1 && roll == point));
+    return((numberOfRolls == 1 && (roll == 7 || roll == 11)) || (numberOfRolls > 1 && roll == point));
 }
 
 bool playerLoses(int roll, int numberOfRolls)
 {
-	return((numberOfRolls == 1 && (roll == 2 || roll == 3 || roll == 12)) || (numberOfRolls > 1 && roll == 7));
+    return((numberOfRolls == 1 && (roll == 2 || roll == 3 || roll == 12)) || (numberOfRolls > 1 && roll == 7));
 }
 
 bool isPointNumber(int roll)
 {
-	return(roll == 4 || roll == 5 || roll == 6 || roll == 8 || roll == 9 || roll == 10);
+    return(roll == 4 || roll == 5 || roll == 6 || roll == 8 || roll == 9 || roll == 10);
 }
 
 
