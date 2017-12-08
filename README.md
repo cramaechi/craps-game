@@ -2,7 +2,7 @@
 A program that simulates a game of craps played 10,000 times between a player and the house, and prints the probability of
 the player winning over the long run. 
 
-No user input is required.
+**No user input is required.**
 
 ## Setup
 1. Download and install [Git](https://git-scm.com/downloads), if you don't already have it.
